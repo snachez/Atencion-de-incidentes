@@ -1,0 +1,19 @@
+﻿@model Atencion_de_incidentes.Models.TBMSMAETickets
+@{
+    Layout = null;
+}
+@using (Html.BeginForm("Reactivar", "Administrador", FormMethod.Post, new { @class = "form-horizontal form-label-left" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div id="result"></div>
+    @Html.Hidden("idTicket")
+    <div class="form-group">
+        <div>
+            <button id="save_data" type="submit" class="btn btn-success">Activar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+    <div class="ln_solid"></div>
+}
+

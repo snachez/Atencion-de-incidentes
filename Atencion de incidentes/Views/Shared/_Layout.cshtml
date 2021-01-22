@@ -1,0 +1,112 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - Sistema de tickets</title>
+
+    <!--STYLES-->
+    <link href="~/Content/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome --><!--Iconos-->
+    <link href="~/Content/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/Content/css/custom.min.css" rel="stylesheet">
+    <!--Mensajes estilos-->
+    <link href="~/Content/plugins/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    <!-- MICSS button[type="file"] Estilo de los botonos-->
+    <link rel="stylesheet" href="~/Content/css/micss.css">
+    <!--Hacemos referencia del estilo tickets.css para aplicarle todos los atributos-->
+    <link href="@Url.Content("~/Content/css/tickes.css")" rel="stylesheet" />
+</head>
+<body class="nav-md">
+    @RenderSection("topLevel", required: false)
+    <!--HEADER-->
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="titulo">Sistema de Tickets</div>
+                        <div class="profile_pic">
+                            <img src="~/Content/img/fondo.jpg" class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <h1><a target="_blank" href="https://www.uned.ac.cr/">UNED</a></h1>
+                        </div>
+                    </div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="@Url.Action("convertirimagen","Home", new { id = @User.Identity.GetUserId() })" class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Bienvenido </span>
+                            <h2>@User.Identity.GetUserName()</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <!----------fin del head---------->
+                    <!--BODY-->
+                    <!----------Inicio del sidebar(menu vertical y linea horizontal arriba)---------->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <!-- sidebar menu -->
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                @{Html.RenderAction("LoadMenu", "Home");}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top_nav">
+                <!-- top navigation -->
+                <div class="nav_menu ocultarImpresion">
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+            <!-- fin top navigation -->
+            @RenderSection("featured", required: false)
+            <!----------Inicio del general.html---------->
+            <div class="right_col" role="main">
+                @RenderBody()
+            </div>
+            <!----------Fin del general.html---------->
+            <!--FOOTER-->
+            <!----------Inicio del footer---------->
+            <footer class="ocultarImpresion">
+                <div class="clearfix"></div>
+                <div class="pull-right">
+                    <b>Version</b> 1.0.0
+                </div>
+                <strong>Sistema de Tickets <a target="_blank" href="https://www.uned.ac.cr/">UNED</a>.</strong>
+            </footer>
+            <!----------Fin del footer---------->
+        </div>
+    </div>
+    <!--SCRIPTS-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <!--Custom-->
+    <script src="~/Content/js/custom.min.js"></script>
+    <!--libreria de sweetalert para mostrar las ventanas emergentes-->
+    <script src="~/Content/plugins/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="~/Content/plugins/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="~/Scripts/toastr.min.js"></script>
+    <!--Hacemos referencia al js tickets.js para aplicarle todos los atributos-->
+    <script src="~/Content/js/tickets.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.form.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="~/Content/js/Notificaciones.js"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

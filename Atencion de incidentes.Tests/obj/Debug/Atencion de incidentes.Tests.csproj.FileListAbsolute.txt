@@ -1,0 +1,197 @@
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csproj.CoreCompileInputs.cache
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csprojAssemblyReference.cache
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.dll.config
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.pdb
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EntityFramework.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Owin.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.pdb
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.dll.config
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EntityFramework.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csproj.CopyComplete
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.dll
+C:\Users\jefry\Desktop\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.pdb
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.dll.config
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.pdb
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Newtonsoft.Json.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Helpers.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Mvc.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Razor.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Optimization.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EntityFramework.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Owin.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.pdb
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.dll.config
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Newtonsoft.Json.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Helpers.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Mvc.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Razor.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Optimization.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EntityFramework.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csprojAssemblyReference.cache
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csproj.CopyComplete
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.dll
+F:\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.pdb
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.dll.config
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.Tests.pdb
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EntityFramework.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Owin.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\PagedList.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EPPlus.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.pdb
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Atencion de incidentes.dll.config
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EntityFramework.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\PagedList.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\EPPlus.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\bin\Debug\es\Microsoft.AspNet.SignalR.Core.resources.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csprojAssemblyReference.cache
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.csproj.CopyComplete
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.dll
+C:\Users\jefry\Desktop\Proyecto final\Atencion de incidentes\Atencion de incidentes.Tests\obj\Debug\Atencion de incidentes.Tests.pdb

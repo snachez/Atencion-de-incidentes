@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94F644BC-7F82-4E55-AF14-598397E9DEC9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Atencion_de_incidentes</RootNamespace>
+    <AssemblyName>Atencion de incidentes</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TecnicoController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CustomHtmlHelper.cs" />
+    <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Hubs\NotificationHub.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\AspNetRoles.cs" />
+    <Compile Include="Models\AspNetUserClaims.cs" />
+    <Compile Include="Models\AspNetUserLogins.cs" />
+    <Compile Include="Models\AspNetUsers.cs" />
+    <Compile Include="Models\CustomPermission.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Mensajes.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MenuTemp.cs" />
+    <Compile Include="Models\ModeloUnedMS.cs" />
+    <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\PermissionMenu.cs" />
+    <Compile Include="Models\REPORTE.cs" />
+    <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\TBMCALICalificacion.cs" />
+    <Compile Include="Models\TBMSCATCategorias.cs" />
+    <Compile Include="Models\TBMSCATEstadosTickets.cs" />
+    <Compile Include="Models\TBMSESPECIALIDADXCATEGORIA.cs" />
+    <Compile Include="Models\TBMSMAEBaseConoc.cs" />
+    <Compile Include="Models\TBMSMAEEspecialidades.cs" />
+    <Compile Include="Models\TBMSMAEPrioridades.cs" />
+    <Compile Include="Models\TBMSMAETickets.cs" />
+    <Compile Include="Notificaciones\NotificacionComponente.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\Custom.css" />
+    <Content Include="Content\css\custom.min.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\micss.css" />
+    <Content Include="Content\css\Notificaciones.css" />
+    <Content Include="Content\css\tickes.css" />
+    <Content Include="Content\img\fondo.jpg" />
+    <Content Include="Content\img\img1.jpg" />
+    <Content Include="Content\img\img2.jpg" />
+    <Content Include="Content\img\Loadingsome.gif" />
+    <Content Include="Content\img\loginFondo.jpg" />
+    <Content Include="Content\img\logouned.png" />
+    <Content Include="Content\img\soporte.jpg" />
+    <Content Include="Content\img\user.jpg" />
+    <Content Include="Content\js\Administrador\RegistroEspecialidades.js" />
+    <Content Include="Content\js\Administrador\RegistroCategoria.js" />
+    <Content Include="Content\js\Administrador\RegistroIncidencia.js" />
+    <Content Include="Content\js\Administrador\RegistroAtendido.js" />
+    <Content Include="Content\js\Administrador\Registroasignado.js" />
+    <Content Include="Content\js\MostrarcalificarTicket_Administrador.js" />
+    <Content Include="Content\js\Usuario\ListaespecialidadesUsuario.js" />
+    <Content Include="Content\js\Usuario\MostrarcalificarTicket_Usuario.js" />
+    <Content Include="Content\js\Usuario\Crearticket.js" />
+    <Content Include="Content\js\Chart2.js" />
+    <Content Include="Content\js\Chart.js" />
+    <Content Include="Content\js\Notificaciones.js" />
+    <Content Include="Content\js\Administrador\Registro.js" />
+    <Content Include="Content\js\ListaespecialidadesUsuario.js" />
+    <Content Include="Content\js\NuevaCategoria.js" />
+    <Content Include="Content\js\CategoriaCancelar.js" />
+    <Content Include="Content\js\TecnicoCancelar.js" />
+    <Content Include="Content\js\EditarCategoria.js" />
+    <Content Include="Content\js\Tecnicoeditar.js" />
+    <Content Include="Content\js\Listaespecialidades.js" />
+    <Content Include="Content\js\nuevoTecnico.js" />
+    <Content Include="Content\js\reactivarTicket_Administrador.js" />
+    <Content Include="Content\js\incidenciaTicket_Administrador.js" />
+    <Content Include="Content\js\cerrarTicket_Administrador.js" />
+    <Content Include="Content\js\custom.min.js" />
+    <Content Include="Content\js\reasignarTicket_Administrador.js" />
+    <Content Include="Content\js\subir_imagen.js" />
+    <Content Include="Content\js\Tecnico\cerrarTicket_Tecnico.js" />
+    <Content Include="Content\js\Tecnico\incidenciaTicket_Tecnico.js" />
+    <Content Include="Content\js\Tecnico\reasignarTicket_Tecnico.js" />
+    <Content Include="Content\js\Tecnico\RegistroAtendido.js" />
+    <Content Include="Content\js\Tecnico\Registroasignado.js" />
+    <Content Include="Content\js\Tecnico\Registro.js" />
+    <Content Include="Content\js\tickets.js" />
+    <Content Include="Content\js\Usuario\CalificarTicket.js" />
+    <Content Include="Content\js\Usuario\Editarticket.js" />
+    <Content Include="Content\js\Usuario\incidenciaTicket_Usuario.js" />
+    <Content Include="Content\js\Usuario\reactivarTicket_Usuario.js" />
+    <Content Include="Content\js\Usuario\reasignarTicket_Usuario.js" />
+    <Content Include="Content\js\Usuario\Registro.js" />
+    <Content Include="Content\js\ValidarFormularios.js" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\plugins\bootstrap\js\npm.js" />
+    <Content Include="Content\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\plugins\jquery-1.10.2.min.js" />
+    <Content Include="Content\plugins\jquery-2.1.4.js" />
+    <Content Include="Content\plugins\sweetalert2\dist\sweetalert2.all.js" />
+    <Content Include="Content\plugins\sweetalert2\dist\sweetalert2.all.min.js" />
+    <Content Include="Content\plugins\sweetalert2\dist\sweetalert2.css" />
+    <Content Include="Content\plugins\sweetalert2\dist\sweetalert2.js" />
+    <Content Include="Content\plugins\sweetalert2\dist\sweetalert2.min.css" />
+    <Content Include="Content\plugins\sweetalert2\dist\sweetalert2.min.js" />
+    <Content Include="Content\plugins\sweetalert2\src\constants.js" />
+    <Content Include="Content\plugins\sweetalert2\src\globalState.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\buttons-handlers.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\close.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\enable-disable-elements.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\getInput.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\hideLoading.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\keydown-handler.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\popup-click-handler.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\progress-steps.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\show-reset-validation-error.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\update.js" />
+    <Content Include="Content\plugins\sweetalert2\src\instanceMethods\_main.js" />
+    <Content Include="Content\plugins\sweetalert2\src\privateMethods.js" />
+    <Content Include="Content\plugins\sweetalert2\src\privateProps.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\argsToParams.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\dom.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\fire.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\mixin.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\queue.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\showLoading.js" />
+    <Content Include="Content\plugins\sweetalert2\src\staticMethods\timer.js" />
+    <Content Include="Content\plugins\sweetalert2\src\SweetAlert.js" />
+    <Content Include="Content\plugins\sweetalert2\src\sweetalert2.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\aria.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\classes.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\defaultInputValidators.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\DismissReason.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\animationEndEvent.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\domUtils.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\getters.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\index.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\init.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\inputUtils.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\measureScrollbar.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\parseHtmlToContainer.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\render.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderActions.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderCloseButton.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderContainer.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderContent.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderFooter.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderHeader.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderIcon.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderImage.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderInput.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderPopup.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderProgressSteps.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\dom\renderers\renderTitle.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\ieFix.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\iosFix.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\isNodeEnv.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\openPopup.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\params.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\scrollbarFix.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\setParameters.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\Timer.js" />
+    <Content Include="Content\plugins\sweetalert2\src\utils\utils.js" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Content\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\plugins\sweetalert2\CHANGELOG.md" />
+    <Content Include="Content\plugins\sweetalert2\LICENSE" />
+    <Content Include="Content\plugins\sweetalert2\package.json" />
+    <Content Include="Content\plugins\sweetalert2\README.md" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_animations.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_body.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_core.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_mixins.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_polyfills.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_theming.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_toasts-animations.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_toasts-body.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\scss\_toasts.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\sweetalert2.scss" />
+    <Content Include="Content\plugins\sweetalert2\src\variables.scss" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.form.min.js" />
+    <Content Include="Scripts\jquery.min.map" />
+    <Content Include="Scripts\jquery.form.min.js.map" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\LoadMenu.cshtml" />
+    <Content Include="Views\Account\Error.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Soporte.cshtml" />
+    <Content Include="Views\Administrador\Index.cshtml" />
+    <Content Include="Views\Administrador\ticketsDetalleAsignado.cshtml" />
+    <Content Include="Views\Administrador\ticketsAsignado.cshtml" />
+    <Content Include="Views\Administrador\ticketsDetalleAtendido.cshtml" />
+    <Content Include="Views\Administrador\ticketsAtendido.cshtml" />
+    <Content Include="Views\Administrador\Categorias.cshtml" />
+    <Content Include="Views\Administrador\reportes.cshtml" />
+    <Content Include="Views\Administrador\Especialidad.cshtml" />
+    <Content Include="Views\Administrador\MostrarCalificacion.cshtml" />
+    <Content Include="Views\Administrador\CerrarTicket.cshtml" />
+    <Content Include="Views\Administrador\Reasignar.cshtml" />
+    <Content Include="Views\Tecnico\ticketsDetalleAsignado.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\CrearTicket.cshtml" />
+    <Content Include="Views\Administrador\Incidencia.cshtml" />
+    <Content Include="Views\Administrador\Reactivar.cshtml" />
+    <Content Include="Views\Administrador\ticketsDetalleIncidencia.cshtml" />
+    <Content Include="Views\Administrador\ticketsIncidencia.cshtml" />
+    <Content Include="Views\Administrador\nuevoTecnico.cshtml" />
+    <Content Include="Views\Administrador\TecnicoEditar.cshtml" />
+    <Content Include="Views\Administrador\TecnicoCancelar.cshtml" />
+    <Content Include="Views\Administrador\NuevaCategoria.cshtml" />
+    <Content Include="Views\Administrador\CancelarCategoria.cshtml" />
+    <Content Include="Views\Administrador\EditarCategoria.cshtml" />
+    <Content Include="Views\Usuario\Editarticket.cshtml" />
+    <Content Include="Views\Tecnico\ticketsAsignado.cshtml" />
+    <Content Include="Views\Tecnico\ticketsAtendido.cshtml" />
+    <Content Include="Views\Tecnico\ticketsDetalleAtendido.cshtml" />
+    <Content Include="Views\Usuario\ticketsDetalleAsignado.cshtml" />
+    <Content Include="Views\Usuario\ticketsDetalleAtendido.cshtml" />
+    <Content Include="Views\Usuario\ticketsDetalleIncidencia.cshtml" />
+    <Content Include="Views\Tecnico\CerrarTicket.cshtml" />
+    <Content Include="Views\Tecnico\Index.cshtml" />
+    <Content Include="Views\Tecnico\Reasignar.cshtml" />
+    <Content Include="Views\Tecnico\Incidencia.cshtml" />
+    <Content Include="Views\Usuario\Calificar.cshtml" />
+    <Content Include="Views\Usuario\MostrarCalificacion.cshtml" />
+    <Content Include="Views\Usuario\Incidencia.cshtml" />
+    <Content Include="Views\Usuario\Reactivar.cshtml" />
+    <Content Include="Views\Usuario\Reasignar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="archivos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Content\plugins\sweetalert2\sweetalert2.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36534</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:36534/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

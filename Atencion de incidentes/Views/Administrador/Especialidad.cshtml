@@ -1,0 +1,222 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<Atencion_de_incidentes.Models.AspNetUsers>
+
+@{
+    ViewBag.Title = "Especialidad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!----------Inicio del categorias.html---------->
+<!----------Inicio del tickets.html---------->
+<!-- page content -->
+<div class="">
+    <div class="page-title">
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="ocultarImpresion">
+                <!--Para ocultar este bloque en la impresión--><!--Inicio del menu -->
+                <ul class="nav nav-tabs pull-right">
+                    <li class="nav-item">
+                        <!--Inicio de generar una nuevo tecnico de la empresa-->
+                        <a class="nav-link" data-toggle="modal" data-target=".bs-example-modal-lg-nuevoTecnico" id="btnagregartecnico"><i class="fa fa-plus-circle"></i> Agregar Técnico</a>
+                        <!--Fin de de generar un nuevo tecnico de la empresa-->
+                    </li>
+                    <li class="nav-item">
+                        <!--Inicio del boton para imprimir en pantalla -->
+                        <a class="nav-link" href="#" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        <!--Fin del boton regresar para imprimir en pantalla-->
+                    </li>
+                </ul>
+            </div><!-- Final del menu-->
+            <div class="x_panel">
+                <!--Inicio de las migas de pan-->
+                <div class="form-group row x_title">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <label class="control-label"><h3>Especialidad del técnico</h3></label>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center ocultarImpresion">
+                        <ol class="breadcrumb">
+                            <li class="active"><i class="fa fa-bookmark"></i> Registro de todas las especialidades </li>
+                        </ol>
+                    </div>
+                </div>
+                <!--Final de las migas de pan-->
+                <!-- form seach -->
+                @using (Html.BeginForm("Especialidad", "Administrador", FormMethod.Get, new { @class = "form-horizontal", role = "form", id = "gastos" }))
+                {
+                    <div class="form-group row text-center ocultarImpresion">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <label for="q" class="control-label">
+                                Mostrar
+                                <select size="1" name="registro" id="registro" aria-controls="dataTables1">
+                                    <option selected="selected">Seleccione</option>
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                registros
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control ph-center" id="Inicio" name="Inicio" placeholder="Buscar por nombre o especialidad">
+                        </div>
+                    </div>
+                }
+                <!-- end form seach -->
+                <!--Inicio de la tabla categorias-->
+                <div class="x_content">
+                    <div class="table-responsive">
+                        <div id="resultados"></div>
+                        <div class="outer_div">
+                            <table class="table table no-margin table-bordered table-striped jambo_table bulk_action">
+                                <thead>
+                                    <tr class="headings">
+                                        <!--Titulo de la tabla-->
+                                        <th class="column-title">#ID</th>
+                                        <th class="column-title">Nombre</th>
+                                        <th class="column-title">Correo Electrónico</th>
+                                        <th class="column-title">Tipo de Usuario</th>
+                                        <th class="column-title">Especialidad</th>
+                                        <th class="column-title no-link last ocultarImpresion"><span class="nobr"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.Count() == 0)
+                                    {
+                                        <h2>No se encontrarón datos!</h2>
+                                    }
+                                    else
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr class="even pointer">
+                                                <!--Resultado de la primera fila de la tabla-->
+                                                @if (item.idEspecialidad != null)
+                                                {
+                                                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.NombreCompleto)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                                    <td>Técnico</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.TBMSMAEEspecialidades.tipoEspecialidad)</td>
+                                                    <td class="ocultarImpresion">
+                                                        <!--Inicio de editar y eliminar tickets-->
+                                                        <div class="text-center">
+                                                            <!--Icono de editar tickets-->
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acción
+                                                                    <span class="caret"></span>
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <ul class="dropdown-menu tamañoAccionesEspecialidadAdministrador">
+                                                                    <li><a data-toggle="modal" data-target=".bs-example-modal-lg-editarTecnico" data-id="@item.Id" id="btntecnicoeditar" class="btntecnicoeditar"><i class="glyphicon glyphicon-edit"></i> Editar Técnico</a></li>
+                                                                    <li><a data-toggle="modal" data-target=".bs-example-modal-lg-cancelarTecnico" data-id="@item.Id" id="btntecnicocancelar" class="btntecnicocancelar"><i class="fa fa-close"></i> Cancelar Técnico</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                }
+                                            </tr>
+                                        }
+                                    }
+                                    <tr class="ocultarImpresion">
+                                        <td colspan="7" class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-4">
+                                                <div id="example1_info" role="status" aria-live="polite">
+
+                                                    Mostrando registros del @(Model.FirstItemOnPage) al @(Model.LastItemOnPage) de un total de @(Model.TotalItemCount) registros
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-8">
+                                                @Html.PagedListPager(Model, pagina => Url.Action("Especialidad", new { pagina }))
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- Carga los datos ajax -->
+                        <!-- /ajax -->
+                    </div>
+                </div>
+                <!--Fin de la tabla categorias-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page content -->
+<!----------Fin del categories.html---------->
+<!----------Inicio de la ventanas emergentes---------->
+<!--Inicio de cancelar técnico -->
+<div class="modal fade bs-example-modal-lg-cancelarTecnico" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Cancelar al técnico</h4>
+            </div>
+            <div class="modal-body" id="TecnicoCancelar">
+                <div class="text-center">
+                    <img src="~/Content/img/Loadingsome.gif" class="icon" width="300" height="300" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Final cancelar técnico-->
+<!--Final de agregar un nuevo tecnico de la empresa-->
+<div class="modal fade bs-example-modal-lg-nuevoTecnico" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Agregar Técnico</h4>
+            </div>
+            <div class="modal-body" id="nuevoTecnico">
+                <div class="text-center">
+                    <img src="~/Content/img/Loadingsome.gif" class="icon" width="300" height="300" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- /Modal -->
+<!--Final de agregar un nuevo tecnico de la empresa-->
+<!--Inicio Final de editar un tecnico de la empresa-->
+<div class="modal fade bs-example-modal-lg-editarTecnico" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Editar Técnico</h4>
+            </div>
+            <div class="modal-body" id="TecnicoEdita">
+                <div class="text-center">
+                    <img src="~/Content/img/Loadingsome.gif" class="icon" width="300" height="300" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- /Modal -->
+<!--Final de editar un tecnico de la empresa-->
+@section Scripts {
+    <script src="~/Content/js/Administrador/RegistroEspecialidades.js"></script>
+    <script src="~/Content/js/nuevoTecnico.js"></script>
+    <script src="~/Content/js/Tecnicoeditar.js"></script>
+    <script src="~/Content/js/TecnicoCancelar.js"></script>
+    <script src="~/Content/js/ValidarFormularios.js"></script>
+}

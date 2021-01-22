@@ -1,0 +1,23 @@
+﻿@model Atencion_de_incidentes.Models.AspNetUsers
+
+@{
+    ViewBag.Title = "TecnicoCancelar";
+    Layout = null;
+}
+@using (Html.BeginForm("TecnicoCancelar", "Administrador", FormMethod.Post, new { @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add"}))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    if (ViewBag.Error!=null)
+    {
+    <div class="alert alert-warning alert-dismissable fade in"></div>
+    }
+    @Html.Hidden("Id")
+    <div class="form-group">
+        <div>
+            <button id="save_data" type="submit" class="btn btn-success">Eliminar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+}
+

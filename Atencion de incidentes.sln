@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atencion de incidentes", "Atencion de incidentes\Atencion de incidentes.csproj", "{94F644BC-7F82-4E55-AF14-598397E9DEC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atencion de incidentes.Tests", "Atencion de incidentes.Tests\Atencion de incidentes.Tests.csproj", "{EE873436-C33E-47CE-A597-747A7B745B62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94F644BC-7F82-4E55-AF14-598397E9DEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F644BC-7F82-4E55-AF14-598397E9DEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F644BC-7F82-4E55-AF14-598397E9DEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F644BC-7F82-4E55-AF14-598397E9DEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE873436-C33E-47CE-A597-747A7B745B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE873436-C33E-47CE-A597-747A7B745B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE873436-C33E-47CE-A597-747A7B745B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE873436-C33E-47CE-A597-747A7B745B62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F559DE96-A661-49BE-902E-6A807BA9B4FC}
+	EndGlobalSection
+EndGlobal

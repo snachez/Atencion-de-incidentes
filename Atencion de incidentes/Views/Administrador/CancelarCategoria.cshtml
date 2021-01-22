@@ -1,0 +1,19 @@
+﻿@model Atencion_de_incidentes.Models.TBMSESPECIALIDADXCATEGORIA
+
+@{
+    ViewBag.Title = "CancelarCategoria";
+    Layout = null;
+}
+@using (Html.BeginForm("CancelarCategoria", "Administrador", FormMethod.Post, new {onsubmit = "return SubmitFormCancelarCategoria(this)", @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Hidden("IdEspecialidad")
+    @Html.Hidden("IdCategoria")
+    <div class="form-group">
+        <div>
+            <button id="save_data" type="submit" class="btn btn-success">Eliminar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+    </div>
+}

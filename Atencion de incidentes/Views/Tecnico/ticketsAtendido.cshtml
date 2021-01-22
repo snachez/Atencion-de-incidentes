@@ -1,0 +1,148 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<Atencion_de_incidentes.Models.TBMSMAETickets>
+
+@{
+    ViewBag.Title = "ticketsAtendido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!----------Inicio del general.html---------->
+<!-- page content -->
+<div class="">
+    <div class="page-title">
+        <!-- content -->
+        <!--Inicio de la tabla ticket-->
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="ocultarImpresion">
+                <!--Para ocultar este bloque de la impresión-->
+                <ul class="nav nav-tabs pull-right">
+                    <li class="nav-item">
+                        <!--Inicio del boton para imprimir en pantalla -->
+                        <a class="nav-link" href="#" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        <!--Fin del boton regresar para imprimir en pantalla-->
+                    </li>
+                    <li class="nav-item">
+                        <!--Inicio del boton para descargar en excell en pantalla -->
+                        <a class="nav-link" href="@Url.Action("DescargarExcelTicketAtendidos","Tecnico")"><i class="fa fa-file-excel-o"></i> Descargar Excell</a>
+                        <!--Fin del boton para descargar en excell en pantalla-->
+                    </li>
+                </ul>
+            </div>
+            <div class="x_panel">
+                <!--Inicio de las migas de pan-->
+                <div class="form-group row x_title">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <label class="control-label"><h3>Tickets Atendidos</h3></label>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center ocultarImpresion">
+                        <ol class="breadcrumb">
+                            <li class="active"><i class="fa fa-ticket"></i> Registro de todos los tickets </li>
+                        </ol>
+                    </div>
+                </div>
+                <!--Final de las migas de pan-->
+                <!-- form seach -->
+                @using (Html.BeginForm("ticketsAtendido", "Tecnico", FormMethod.Get, new { @class = "form-horizontal", role = "form", id = "gastos" }))
+                {
+                    <div class="form-group row text-center ocultarImpresion">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <label for="q" class="control-label">
+                                Mostrar
+                                <select size="1" name="registro" id="registro" aria-controls="dataTables1">
+                                    <option selected="selected">Seleccione</option>
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                registros
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control ph-center" name="Inicio" id="Inicio" placeholder="Buscar por nombre o titulo">
+                        </div>
+                    </div>
+                }
+                <!-- end form seach -->
+                <!--Inicio de la tabla tickets-->
+                <div class="x_content">
+                    <div class="table-responsive">
+                        <div id="resultados"></div>
+                        <div class="outer_div">
+                            <table class="table table no-margin table-bordered table-striped jambo_table bulk_action">
+                                <thead>
+                                    <tr class="headings">
+                                        <!--Titulo de la tabla-->
+                                        <th class="column-title ocultarImpresion">Detalle</th>
+                                        <th class="column-title">N° Ticket</th>
+                                        <th class="column-title">Nombre del Usuario</th>
+                                        <th class="column-title">Fecha-Hora</th>
+                                        <th class="column-title">Técnico Asignado</th>
+                                        <th class="column-title">Problema</th>
+                                        <th class="column-title">Categoria</th>
+                                        <th class="column-title">Estado</th>
+                                        <th class="column-title no-link last ocultarImpresion"><span class="nobr"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.Count() == 0)
+                                    {
+                                        <h2>No se encontrarón datos!</h2>
+                                    }
+                                    else
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr class="even pointer">
+                                                <!--Resultado de la primera fila de la tabla-->
+                                                @if (item.TBMSCATEstadosTickets.Descripcion == "Atendido")
+                                                {
+                                                    <td class="ocultarImpresion">
+                                                        <a class="btn btn-default btn-xs" href="@Url.Action("ticketsDetalleAtendido", "Tecnico", new { id = item.idTicket })">Ver <span class="glyphicon glyphicon-arrow-right"></span></a>
+                                                    </td>
+                                                    <td>@Html.DisplayFor(modelItem => item.idTicket)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.AspNetUsers1.NombreCompleto)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.fechaTicket)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.AspNetUsers.NombreCompleto)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.titulo)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.TBMSCATCategorias.tipoCategoria)</td>
+
+                                                    <td class="text-center" width="80">
+                                                        <div>
+                                                            <p style="padding:3px; margin-bottom:0" class="alert alert-success">Atendido</p>
+                                                        </div>
+                                                    </td>
+                                                }
+                                            </tr>
+                                        }
+                                    }
+                                    <tr class="ocultarImpresion">
+                                        <td colspan="7" class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-4">
+                                                <div id="example1_info" role="status" aria-live="polite">
+
+                                                    Mostrando registros del @(Model.FirstItemOnPage) al @(Model.LastItemOnPage) de un total de @(Model.TotalItemCount) registros
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-8">
+                                                @Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- Carga los datos ajax -->
+                        <!-- /ajax -->
+                    </div>
+                </div>
+                <!--Fin de la tabla tickets-->
+            </div>
+        </div>
+        <!--Final de la tabla ticket-->
+    </div>
+</div>
+<!----------Fin del general.html---------->
+@section Scripts {
+    <script src="~/Content/js/Tecnico/RegistroAtendido.js"></script>
+}

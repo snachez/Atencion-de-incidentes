@@ -1,0 +1,66 @@
+﻿@model Atencion_de_incidentes.Models.TBMSMAETickets
+@{
+    Layout = null;
+    ViewBag.Title = "CrearTicket";
+}
+@using (Html.BeginForm("CrearTicket", "Usuario", FormMethod.Post, new { onsubmit = "return SubmitForm(this)", @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div id="result"></div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">Problema<span class="required">*</span></label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @Html.EditorFor(model => model.titulo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Problema" } })
+            @Html.ValidationMessageFor(model => model.titulo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+            Categoría*
+        </label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @if (ViewBag.idCategoria != null)
+            {
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    @Html.DropDownListFor(model => model.idCategoria, ViewBag.idCategoria as SelectList, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.idCategoria, "", new { @class = "text-danger" })
+                </div>
+            }
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+            Especialidad*
+        </label>
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            @Html.DropDownListFor(model => model.idEspecialidad, new SelectList(string.Empty, "value", "text"), "--seleccione--", new { @class = "form-control idEspecialidad" })
+            @Html.ValidationMessageFor(model => model.idEspecialidad, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">
+            Descripción<span class="required">*</span>
+        </label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @Html.TextAreaFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control", @placeholder = "Descripción del problema", @minlength = "20", @cols = "100", @rows = "8", @style = "width:100%;" } })
+            @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">
+            Adjunto<span class="required"></span>
+        </label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            <input type="file" id="file" name="file" class="form-control" />
+        </div>
+    </div>
+    <div class="ln_solid"></div>
+    <div class="form-group">
+        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+            <button id="save_data" type="submit" class="btn btn-success">Guardar</button>
+            <button type="reset" class="btn btn-info">Resetear</button>
+        </div>
+    </div>
+}
+<script src="~/Content/js/Usuario/ListaespecialidadesUsuario.js"></script>

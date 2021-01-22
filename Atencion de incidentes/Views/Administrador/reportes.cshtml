@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "reportes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <script src="~/Content/plugins/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- JQuery -->
+}
+<script src="~/Content/js/Chart2.js"></script>
+
+<!----------Inicio del reports.html---------->
+<!-- page content -->
+<div class="">
+    <div class="page-title">
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="ocultarImpresion">
+                <!--Pra ocultar la impresión este bloque -->
+                <ul class="nav nav-tabs pull-right">
+                    <li class="nav-item">
+                        <!--Inicio del boton para imprimir en pantalla -->
+                        <a class="nav-link" href="#" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                        <!--Fin del boton regresar para imprimir en pantalla-->
+                    </li>
+                </ul>
+            </div>
+            <!--Inicio de la tabla-->
+            <div class="x_panel">
+                <!--Inicio de las migas de pan-->
+                <div class="form-group row x_title">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <label class="control-label"><h3>Reportes tickets</h3></label>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center ocultarImpresion">
+                        <ol class="breadcrumb">
+                            <li class="active"><i class="fa fa-area-chart"></i> Reportes de los tickets</li>
+                        </ol>
+                    </div>
+                </div>
+                <!--Inicio del formulario de la tabla reportes-->
+                <!-- form search -->
+                <div class="form-group ocultarImpresion">
+                    <div class="col-md-5 col-sm-4 col-xs-12">
+                        <div class="input-group">
+                            <select id="testSelect" name="id" class="form-control">
+                                <option value="1">Top 5 ticket por tecnicos</option>
+                                <option value="2">Top 5 ticket por usuarios</option>
+                                <option value="3">Top 5 ticket por especialidades</option>
+                                <option value="4">Top 5 ticket por categorias</option>
+                                <option value="5">Top 5 ticket por fecha</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <select id="Graficos" name="id" class="form-control">
+                                <option value="1">Grafico en barra</option>
+                                <option value="2">Grafico Circular</option>
+                                <option value="3">Grafico Dona</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--Final del formulario tabla reportes-->
+                <!-- -->
+                <div class="x_content">
+                    <div class="table-responsive">
+                        <div id="resultados"></div>
+                        <div class="outer_div">
+                            <div id="columnchart_div2"></div>
+                        </div><!-- Carga los datos ajax -->
+                        <!-- /ajax -->
+                    </div>
+                </div>
+                <!--Fin de la tabla tickets-->
+                <!-- -->
+            </div>
+
+        </div>
+    </div>
+</div><!-- /page content -->
+<!----------Fin del reports.html---------->

@@ -1,0 +1,45 @@
+/*Estilo especial para los botones tipo*/
+html{
+    height: 100%;
+    width: 100%;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  }
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    display: block;
+}
+.btn-my-button{
+    margin-top: 5px;
+    background: rgb(34,22,132);/*#001489*//*background:#2A3F54 rgb(34,22,132)*/
+    color: #fff;
+    width: 100%;
+}
+.btn-my-button:hover{
+    color: #fff;
+}
+.btn-my-buttonLogin{
+    margin-top: 5px;
+    background: rgb(34,22,132);/*#001489*//*background:#2A3F54 rgb(34,22,132)*/
+    color: #fff;
+}
+.btn-my-buttonLogin:hover{
+    color: #fff;
+}
+footer{
+    background:#F7F7F7;/*#F7F7F7*//*#fff*/
+}
+

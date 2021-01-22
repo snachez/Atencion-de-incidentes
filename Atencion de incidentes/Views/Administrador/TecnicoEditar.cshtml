@@ -1,0 +1,67 @@
+﻿@model Atencion_de_incidentes.Models.AspNetUsers
+
+@{
+    ViewBag.Title = "TecnicoEditar";
+    Layout = null;
+<script src="~/Content/plugins/jquery-2.1.4.js"></script>
+}
+    <script src="~/Content/js/Listaespecialidades.js"></script>
+    @using (Html.BeginForm("TecnicoEditar", "Administrador", FormMethod.Post, new { @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div id="result_user"></div>
+        @Html.Hidden("Id")
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Nombre Completo</label>
+            @Html.EditorFor(model => model.NombreCompleto, new { htmlAttributes = new { @class = "form-control has-feedback-left", @placeholder = "Nombre Completo" } })
+            @Html.ValidationMessageFor(model => model.NombreCompleto, "", new { @class = "text-danger" })
+            <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Departamento</label>
+            @Html.EditorFor(model => model.Departamento, new { htmlAttributes = new { @class = "form-control has-feedback-left", @placeholder = "Departamento" } })
+            @Html.ValidationMessageFor(model => model.Departamento, "", new { @class = "text-danger" })
+            <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Número Télefonico</label>
+            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control has-feedback-left", @placeholder = "Número Télefonico" } })
+            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+        </div>
+        if (ViewBag.Categoria != null)
+        {
+            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                <label>Categoría</label>
+                @Html.DropDownList("Categoria", ViewBag.Categoria as SelectList)
+            </div>
+        }
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Especialidad</label>
+            @Html.DropDownListFor(m => m.TBMSMAEEspecialidades.idEspecialidad, new SelectList(string.Empty, "value", "text"), "--seleccione--", new { @class = "form-control idEspecialidad", id = "idEspecialidad", @name = "idEspecialidad" })
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Correo Electrónico</label>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control has-feedback-left", @placeholder = "Correo Electrónico" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Contraseña</label>
+            <i class="fa fa-lock"></i>
+            @Html.PasswordFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "form-control has-feedback-left" } })
+            @Html.ValidationMessageFor(model => model.PasswordHash, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+            <label>Imagen</label>
+            <input type="file" id="Imagen1" name="Imagen1" />
+            <div class="form-control-focus"> </div>
+        </div>
+        <div class="ln_solid"></div>
+        <div class="form-group">
+            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                <button id="save_data" type="submit" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    }

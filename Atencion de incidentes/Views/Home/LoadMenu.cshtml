@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Atencion_de_incidentes.Models.MenuTemp>
+@foreach (var menu in Model)
+{
+    if (menu.ParentMenuID == 0)
+    {
+        <li class="">
+            <a href="@menu.MenuURL">
+                <i class="@menu.MenuIcon"></i>
+                <span>@menu.DisplayName</span>
+                </a>
+            <ul class="nav collapse" style="display: none; list-style:none">
+                @foreach (var child in Model)
+                {
+
+                    if (child.ParentMenuID == menu.MenuID)
+                    {
+                        <li class="">
+                            <a href="@child.MenuURL">
+                                <i class="@child.MenuIcon"></i>@child.DisplayName
+                            </a>
+                        </li>
+                    }
+
+                }
+            </ul>
+        </li>
+    }
+}

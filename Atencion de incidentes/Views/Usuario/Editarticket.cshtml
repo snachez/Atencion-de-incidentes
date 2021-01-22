@@ -1,0 +1,47 @@
+﻿@model Atencion_de_incidentes.Models.TBMSMAETickets
+
+@{
+    ViewBag.Title = "Editarticket";
+    Layout = null;
+}
+@using (Html.BeginForm("Editarticket", "Usuario", FormMethod.Post, new { @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Hidden("idTicket")
+    <div id="result"></div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">Problema<span class="required">*</span></label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @Html.EditorFor(model => model.titulo, new { htmlAttributes = new { @class = "form-control has-feedback-left" } })
+            @Html.ValidationMessageFor(model => model.titulo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+            Categoría*
+        </label>
+        @if(ViewBag.Categoria != null)
+        {
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            <label>Categoría</label>
+            @Html.DropDownList("Categoria", ViewBag.Categoria as SelectList)
+        </div>
+        }
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">
+            Descripción<span class="required">*</span>
+        </label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @Html.TextAreaFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control", @minlength = "20" } })
+            @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="ln_solid"></div>
+    <div class="form-group">
+        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+            <button id="save_data" type="submit" class="btn btn-success">Guardar</button>
+        </div>
+    </div>
+}

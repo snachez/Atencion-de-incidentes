@@ -1,0 +1,21 @@
+﻿@model Atencion_de_incidentes.Models.TBMSMAETickets
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = null;
+}
+@using (Html.BeginForm("Edit", "Administrador", FormMethod.Post, new { @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div id="result"></div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">Puntuación<span class="required"></span></label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            <input type="text" name="title" class="form-control" value="@ViewBag.valoracion estrellas" readonly="">
+        </div>
+    </div>
+}
+@section Scripts {
+    <script src="~/Content/js/calificarTicket_Administrador.js"></script>
+}

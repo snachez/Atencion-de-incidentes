@@ -1,0 +1,110 @@
+.titulo{/*El titulo del sistema de tickets*/
+  font-size: 26px; color: #FFC211;
+}
+.profile_info h1 a{/*Todos los a que se encuentre dentro de un h1 de la clase .profile_info*/
+  color: #FFC211;
+}
+/*Inicio para cambiar el color de 3d fondo de la lista*/
+ul li:hover {/*Aplicar solo a la lisat desordenada*/
+    box-shadow:/*26B99A*//*2A3F54*/
+    1px 1px #FFC211,
+    2px 2px #FFC211,
+    3px 3px #FFC211;
+}
+ul.no3d li:hover {/*Para remover la propiedad transform que me mueve en el ejeX*/
+    -webkit-transform: none;
+    transform: none;
+}
+/*Final para cambiar el color de 3d fondo de la lista*/
+/*Inicio para centrarTexto*/
+.ph-center::-webkit-input-placeholder { /*Centrar el texto del input con el con el placeholder=*/
+  text-align: center;
+  line-height: 100px;
+}
+/*Final paara centrarTexto*/
+/*Inicio para informacionAdicional*/
+.comment-wrapper .panel-body {/*La informacion Adicional que se muestre en el cuadro de dialogo (chat)*/
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+/*Final para informacionAdicional*/
+/*Inicio para imprimirTicket*/
+@media print{/*Ocultamos lo que necesitemos, para imprimir el tickets con el boton*/
+    .ocultarImpresion{
+        display: none;/*Que no se muestre, es decir ocultamos el bloque que no queremos que salga en la impresión*/
+    }
+}
+/*Final para imprimirTicket*/
+/*Inicio de tamañoAccionesCalificar*/
+.tamañoAccionesCalificar {/*Inicio para hacer más pequeño del cuadro de dialogo del boton de acciones calificar usuario*/
+    width: 110px !important;
+    height: 75px !important;
+    min-width:0;
+    border-radius: 5px;
+}
+.tamañoAccionesCalificar li a {
+    padding: 4px 4px;
+}
+/*Final para tamañoAccionesCalificar*/
+/*Inicio para tamañoAcciones*/
+.tamañoAcciones {/*Para Hacer el cuadro de dialogo más pequeño con el boton de acciones editar y cancelar ticket*/
+    width: 111px !important;
+    height: 50px !important;
+    min-width:0;
+    border-radius: 5px;
+}
+.tamañoAcciones li a {
+    padding: 4px 10px;
+}
+
+/*Final para tamañoAcciones*/
+/*Inicio para estrella calificar*/
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: #FFC211;/*#26B99A;*/
+}
+
+input[type="radio"]:checked ~ label {
+  color: #FFC211;/*#26B99A;*/
+}
+/*Final para estrella calificar*/
+
+/*#007BC0*/

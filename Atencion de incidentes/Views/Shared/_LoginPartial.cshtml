@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNet.Identity
+<link href="~/Content/css/Notificaciones.css" rel="stylesheet" />
+@if (Request.IsAuthenticated)
+{
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        @Html.AntiForgeryToken()
+        <nav>
+            <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <span class="noti glyphicon glyphicon-bell"><span class="count">&nbsp;</span></span>
+            <div class="noti-content">
+                <div class="noti-top-arrow"></div>
+                <ul id="notiContent"></ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="@Url.Action("convertirimagen","Home", new { id = @User.Identity.GetUserId() })" class="rounded-circle" alt="" width="140" height="140">
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-user"></i> Mi perfil</a></li>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    }
+}
+else
+{
+    <!--
+        <li class="dropdown dropdown-user">@*Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })*@</li>
+    -->
+    <li class="dropdown dropdown-user">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+}
+

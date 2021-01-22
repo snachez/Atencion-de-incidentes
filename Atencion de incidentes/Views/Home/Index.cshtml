@@ -1,0 +1,97 @@
+﻿@model Atencion_de_incidentes.Models.AspNetUsers
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!----------Inicio del dashboard.html---------->
+<!-- page content -->
+<div class="">
+    <div class="page-title">
+        @if (@ViewBag.Mensaje != null)
+        {<div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-info alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                    <h4><i class="icon fa fa-info-circle"></i>Informacion!</h4>
+                    @ViewBag.Mensaje
+                </div>
+            </div>
+        }
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
+            <!--Fin de de generar un nueva categoria -->
+            <div class="x_panel">
+                <!--Inicio de las migas de pan-->
+                <div class="form-group row x_title">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <label class="control-label"><h3>Mi Perfil</h3></label>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+                        <ol class="breadcrumb">
+                            <li class="active"><i class="fa fa-user"></i> Datos personales de mi perfil</li>
+                        </ol>
+                    </div>
+                </div>
+                <!--Inicio de la tabla-->
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <div class="image view view-first">
+                        <img class="thumb-image" style="width: 100%; display: block;" src="@Url.Action("convertirimagen","Home", new { id = Model.Id })" alt="Foto" id="img2" />
+                    </div>
+                    @using (Html.BeginForm("Recargarimagen", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <span class="btn btn-my-button btn-file">
+                            Cambiar Imagen de perfil: <input type="file" name="Imagen1" id="image_uploads">
+                        </span>
+                        <input type="submit" class="btn btn-my-button btn-primary">
+                    }
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Informacion personal</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br />
+                            <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="action/upd_profile.php" method="post">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                                        Nombre Completo
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        @Html.DisplayFor(model => model.NombreCompleto)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                        Nombre Departamento
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        @Html.DisplayFor(model => model.Departamento)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                        Número Telefónico
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        @Html.DisplayFor(model => model.PhoneNumber)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                        Correo electrónico
+                                    </label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        @Html.DisplayFor(model => model.Email)
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin de la tabla-->
+            </div>
+        </div>
+    </div>
+</div><!-- /page content -->

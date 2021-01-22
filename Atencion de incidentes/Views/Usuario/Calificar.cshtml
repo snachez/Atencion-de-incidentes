@@ -1,0 +1,54 @@
+﻿@model Atencion_de_incidentes.Models.TBMSMAETickets
+
+@{
+    ViewBag.Title = "Editarticket";
+    Layout = null;
+}
+@using (Html.BeginForm("Calificar", "Usuario", FormMethod.Post, new { onsubmit = "return SubmitFormGuardarCalificacion(this)", @class = "form-horizontal form-label-left input_mask", @id = "add", @name = "add" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Hidden("idTicket")
+    <div id="result"></div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">Tecnico<span class="required">*</span></label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @Html.Display("Tecnico", new { htmlAttributes = new { @class = "form-control has-feedback-left" } })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">Puntuación<span class="required"></span></label>
+        <div class="col-md-9 col-sm-9 col-xs-12 text-left">
+            <div class="x_content">
+                <p class="clasificacion" style="font-size: 16px">
+                    @Html.RadioButtonFor(m => m.TBMCALICalificacion.valoracion, 5, new { id = "radio1" })
+                    <label for="radio1">★</label>
+                    @Html.RadioButtonFor(m => m.TBMCALICalificacion.valoracion, 4, new { id = "radio2" })
+                    <label for="radio2">★</label>
+                    @Html.RadioButtonFor(m => m.TBMCALICalificacion.valoracion, 3, new { id = "radio3" })
+                    <label for="radio3">★</label>
+                    @Html.RadioButtonFor(m => m.TBMCALICalificacion.valoracion, 2, new { id = "radio4" })
+                    <label for="radio4">★</label>
+                    @Html.RadioButtonFor(m => m.TBMCALICalificacion.valoracion, 1, new { id = "radio5" })
+                    <label for="radio5">★</label>
+                </p>
+                @Html.ValidationMessageFor(model => model.TBMCALICalificacion.valoracion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12">
+            Mi comentario<span class="required">*</span>
+        </label>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            @Html.TextAreaFor(model => model.TBMCALICalificacion.comentario, new { htmlAttributes = new { @class = "form-control", @minlength = "20" } })
+            @Html.ValidationMessageFor(model => model.TBMCALICalificacion.comentario, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="ln_solid"></div>
+    <div class="form-group">
+        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+            <button id="save_data" type="submit" class="btn btn-success">Guardar</button>
+        </div>
+    </div>
+}

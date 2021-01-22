@@ -1,0 +1,352 @@
+﻿@model Atencion_de_incidentes.Models.TBMSMAETickets
+@using Microsoft.AspNet.Identity
+@{
+    List<Atencion_de_incidentes.Models.Mensajes> listamensajes = ViewBag.Mensajes;
+    int idticket = ViewBag.idticket;
+    ViewBag.Title = "ticketsDetalleAsignado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!----------Inicio del ticketsDetalle.html---------->
+<!--Toda la informacion del detalle del ticket right_col color de fondo-->
+<div class="page-title">
+    <div class="ocultarImpresion col-md-12 col-sm-12 col-xs-12">
+        <ul class="nav nav-tabs pull-right">
+            <li class="nav-item">
+                <!--Inicio del boton regresar al ticketsAsignado.html -->
+                <a class="nav-link" href="@Url.Action("ticketsAsignado", "Administrador")"><i class="glyphicon glyphicon-arrow-left"></i> Regresar</a>
+                <!--Fin del boton regresar al ticketsAsignado.html-->
+            </li>
+            <li class="nav-item">
+                <!--Inicio del boton para imprimir en pantalla -->
+                <a class="nav-link" href="#" onclick="window.print()"><i class="glyphicon glyphicon-print"></i> Imprimir</a>
+                <!--Fin del boton para imprimir en pantalla-->
+            </li>
+            <li class="nav-item">
+                <!--Inicio del boton para descargar en excell en pantalla -->
+                <a class="nav-link" href="@Url.Action("DescargarExcelTicketAsignadosDetalle/"+Model.idTicket+"","Administrador")"><i class="fa fa-file-excel-o"></i> Descargar Excell</a>
+                <!--Fin del boton para descargar en excell en pantalla-->
+            </li>
+        </ul>
+    </div>
+    <!--Inicio de informacion-->
+    <div class="col-md-12 col-xs-12 col-sm-12">
+        <div class="x_panel">
+            <!--Fondo Blanco-->
+            <!--Inicio de las migas de pan-->
+            <div class="form-group row x_title">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <label class="control-label"><h3>Ticket Asignado ver detalle</h3></label>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center ocultarImpresion">
+                    <ol class="breadcrumb">
+                        <li><a href="@Url.Action("ticketsAsignado", "Administrador")"><i class="fa fa-ticket"></i> Tickets Asignado</a></li>
+                        <li class="active"><i class="fa fa-info-circle"></i> Ver Detalle</li>
+                    </ol>
+                </div>
+            </div>
+            <!--Final de las migas de pan-->
+            <!--Inicio -->
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="panel panel-warning col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">REGISTRADO</h3>
+                    </div>
+                    <div class="panel-body">
+                        Contacto : @Html.DisplayFor(model => model.AspNetUsers1.NombreCompleto)
+                    </div>
+                </div>
+
+
+                <div class="col-md-2"></div>
+                <div class="panel panel-info col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ASIGNADO</h3>
+                    </div>
+                    <div class="panel-body">
+                        Asignado a: @Html.DisplayFor(model => model.AspNetUsers.NombreCompleto), el día @Html.DisplayFor(model => model.fechaTicket)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="panel panel-danger col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SISTEMA INCIDENCIA</h3>
+                    </div>
+                    <div class="panel-body">
+                        Sin actividad
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+                <div class="panel panel-success col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">ATENDIDO</h3>
+                    </div>
+                    <div class="panel-body">
+                        Atendido el día: @Html.DisplayFor(model => model.fechaAtendido)
+                    </div>
+                </div>
+            </div>
+            <!--Fin-->
+        </div>
+    </div>
+    <!--Fin de la informacion-->
+    <div class="row">
+        <!--Inicio 12-->
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!--Inicio bueno-->
+            <div class="x_panel">
+                <!--Inicio del primer bloque-->
+                <div class="col-md-6 col-xs-12 col-sm-12">
+                    <div class="x_title">
+                        <h2>Detalle del ticket</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="action/upd_profile.php" method="post">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3  col-xs-12" for="numero_ticket">
+                                    N° Ticket
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                    <input type="text" name="numero_ticket" id="numero_ticket" class="form-control" value="@Html.DisplayFor(model => model.idTicket)" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3  col-sm-3  col-xs-12 " for="nombre_problema">
+                                    Problema
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                    <input type="text" id="last-nombre_problema" name="nombre_problema" class="form-control" value="@Html.DisplayFor(model => model.titulo)" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3  col-sm-3  col-xs-12 " for="nombre_categoria">
+                                    Categoría
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <input type="text" id="nombre_categoria" name="nombre_categoria" class="form-control" value="@Html.DisplayFor(model => model.TBMSCATCategorias.tipoCategoria)" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3  col-sm-3  col-xs-12 " for="nombre_descripcion">
+                                    Descripción
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                    <textarea type="text" id="nombre_descripcion-name" name="nombre_descripcion" class="form-control" readonly="">@Html.DisplayFor(model => model.descripcion)</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3  col-sm-3  col-xs-12 " for="nombre_estado">
+                                    Estado
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 panel-info">
+                                    <input type="text" id="last-nombre_estado" name="nombre_estado" class="form-control panel-heading" value="@Html.DisplayFor(model => model.TBMSCATEstadosTickets.Descripcion)" readonly="">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--Final del primer bloque-->
+                <!--Inicio del segundo bloque-->
+                <div class="col-md-6 col-xs-12 col-sm-12">
+                    <div class="x_title">
+                        <h2>Atención brindada</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="" method="post">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3  col-xs-12" for="nombre_Analista">
+                                    Analista designado
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                    <input type="text" name="nombre_Analista" id="nombre_Analista" class="form-control" value="@Html.DisplayFor(model => model.AspNetUsers.NombreCompleto)" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3  col-sm-3  col-xs-12 " for="nombre_tipoAtencion">
+                                    Tipo de atención
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12 ">
+                                    <input type="text" id="nombre_tipoAtencion" name="nombre_tipoAtencion" class="form-control" value="Soporte" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3  col-sm-3  col-xs-12 " for="nombre_detalle">
+                                    Resultado de la atención
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <textarea type="text" id="nombre_resultado" name="nombre_resultado" class="form-control" readonly="">En espera...</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--Final del segundo bloque-->
+                <!--Inicio del tercer bloque-->
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="x_title">
+                        <h2>Información adicional</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <!--Inicio de la información adicional-->
+                        <div class="row bootstrap snippets">
+                            <div class="col-md-6 col-md-offset-2 col-sm-12">
+                                <div class="comment-wrapper">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            Panel de consultas
+                                        </div>
+                                        <div class="panel-body">
+                                            <textarea class="form-control" placeholder="Agregar un comentario..." rows="3" id="textomensaje"></textarea>
+                                            <br>
+                                            <button type="button" class="btn btn-info pull-right" id="enviomensaje">Enviar</button>
+                                            <div class="clearfix"></div>
+                                            <hr>
+                                            <ul class="media-list" id="todoslosmensajes" style="overflow:auto;">
+                                                @foreach (var Mensajes in listamensajes)
+                                                {
+                                                    if (listamensajes != null)
+                                                    {
+                                                        <li class="media">
+                                                            <a href="#" class="pull-left">
+                                                                <img src="@Url.Action("convertirimagen","Home", new { id = Mensajes.idUsuario })" alt="ImagenPerfil" class="img-circle">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <span class="text-muted pull-right">
+                                                                    <small class="text-muted">@Mensajes.fechaCreacion.ToString()</small>
+                                                                </span>
+                                                                <strong class="text-success">@Mensajes.AspNetUsers.NombreCompleto</strong>
+                                                                <p>
+                                                                    @Mensajes.texto
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    }else if (listamensajes==null)
+                                                    {
+
+                                                    }
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Final de la información adicional-->
+                    </div>
+                </div>
+                <!--Final del tercer bloque-->
+            </div>
+            <!--Inicio Bueno -->
+            <div class="text-center ocultarImpresion">
+                <a data-toggle="modal" data-target=".bs-example-modal-lg-asignadoAgregarIncidencia" class="btn btn-danger btnincidencia" data-id="@Html.DisplayFor(model => model.idTicket)" id="btnincidencia"><i class="fa fa-ban"></i> Agregar Incidencia</a>
+
+                <a data-toggle="modal" data-target=".bs-example-modal-lg-reasignar" class="btn btn-success btnreasignar" data-id="@Html.DisplayFor(model => model.idTicket)" id="btnreasignar"><i class="fa fa-child"></i> Reasignar Técnico</a>
+
+            </div>
+        </div>
+        <!--Final 12-->
+    </div>
+</div>
+<!--Fin de ver detalle ticket-->
+<!--Fin de editar y cancelar-->
+<!-- /page content -->
+<!----------Fin del tickets.html---------->
+<!----------Inicio de la ventanas emergentes---------->
+<!--Inicio de ticket asignado (agregar incidencia)-->
+<div class="modal fade bs-example-modal-lg-asignadoAgregarIncidencia" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Nueva incidencia</h4>
+            </div>
+            <div class="modal-body" id="incidencia">
+                <div class="text-center">
+                    <img src="~/Content/img/Loadingsome.gif" class="icon" width="300" height="300" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- /Modal -->
+<!--Fin de ticket asignado y incidencia(agregar incidencia)-->
+<!--Inicio de ticket asignado(reasignar ticket)-->
+<div class="modal fade bs-example-modal-lg-reasignar" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Reasignar Técnico</h4>
+            </div>
+            <div class="modal-body" id="modal-content3">
+                <div class="text-center">
+                    <img src="~/Content/img/Loadingsome.gif" class="icon" width="300" height="300" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- /Modal -->
+<!--Inicio de ticket registrado(asignar ticket)-->
+@section Scripts {
+    <script src="~/Content/js/incidenciaTicket_Administrador.js"></script>
+    <script src="~/Content/js/reasignarTicket_Administrador.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function () {
+            var chat = $.connection.chatHub;
+            chat.client.sendChat = function (nombre,mensajetexto,fecha,idUser) {
+
+                var nuevoMensaje =  "<li class='media'>"+
+                                     "<a href='#' class='pull-left'>"+
+                                       "<img src='/Home/convertirimagen/"+idUser+"' alt='ImagenPerfil' class='img-circle'>"+
+                                     "</a>"+
+                                       "<div class='media-body'>"+
+                                        "<span class='text-muted pull-right'>"+
+                                          "<small class='text-muted'>"+fecha+"</small>"+
+                                        "</span>"+
+                                        "<strong class='text-success'>"+nombre+"</strong>"+
+                                        "<p>"
+                                         +mensajetexto+
+                                        "</p>"
+                                       "</div>"
+                "</li>"
+                $("#todoslosmensajes").append(nuevoMensaje);
+                $("#textomensaje").focus();
+                $("#textomensaje").prop("value", "");
+                $('#todoslosmensajes').scrollTop($('#todoslosmensajes')[0].scrollHeight);
+            };
+
+            $.connection.hub.start().done(function () {
+                $("#enviomensaje").click(function () {
+                    var nombre = "@User.Identity.GetUserName().ToString()";
+                    var idticket = "@idticket";
+                    var mensajetexto = $("#textomensaje").val();
+                    var idUser = "@User.Identity.GetUserId().ToString()";
+
+                    if (mensajetexto == "") {
+                        return;
+                    }
+                    chat.server.send(nombre, idticket, mensajetexto, idUser);
+                })
+            })
+        })
+    </script>
+}
